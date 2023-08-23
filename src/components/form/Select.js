@@ -10,7 +10,9 @@ function Select({text, name, options, handleOnChange, value}) {
                 onChange={handleOnChange}
             >
                 <option>Selecione uma opção</option>
-
+                {options.map(option => (
+                    <option value={option.id} key={option.id}>{option.name}</option>
+                ))}
             </select>
         </div>
     )
